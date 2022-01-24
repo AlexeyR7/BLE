@@ -1,0 +1,2 @@
+BLE_programm.c:10:6:ProgrammerInitGPIO	8	static
+BLE_programm.c:19:6:BLE_Programmer_main	8	static

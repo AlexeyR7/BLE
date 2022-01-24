@@ -1,0 +1,3 @@
+net.c:18:6:packet_receive	16	static
+net.c:27:6:net_poll	8	static
+net.c:32:6:net_ini	8	static

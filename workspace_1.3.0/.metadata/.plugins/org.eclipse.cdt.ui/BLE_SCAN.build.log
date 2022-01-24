@@ -1,0 +1,10 @@
+12:23:49 **** Build of configuration Debug for project BLE_SCAN ****
+make -j4 all 
+arm-none-eabi-size   BLE_SCAN.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25604	    152	  13296	  39052	   988c	BLE_SCAN.elf
+Finished building: default.size.stdout
+ 
+
+12:23:51 Build Finished. 0 errors, 0 warnings. (took 2s.670ms)
+

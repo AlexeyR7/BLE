@@ -1,0 +1,3 @@
+Logger.c:12:19:LOGGER_init	8	static
+Logger.c:20:6:LOG	16	static
+Logger.c:29:6:LOG_UART	24	static

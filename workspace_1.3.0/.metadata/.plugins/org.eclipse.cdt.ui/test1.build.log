@@ -1,0 +1,24 @@
+12:32:17 **** Incremental Build of configuration Debug for project test1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F103xB -DDEBUG -c -I../USB_DEVICE/Target -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../USB_DEVICE/App -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:90:3: warning: implicit declaration of function 'MX_USB_DEVICE_Init'; did you mean 'MX_GPIO_Init'? [-Wimplicit-function-declaration]
+   MX_USB_DEVICE_Init();
+   ^~~~~~~~~~~~~~~~~~
+   MX_GPIO_Init
+../Core/Src/main.c:118:7: warning: implicit declaration of function 'CDC_Transmit_FS' [-Wimplicit-function-declaration]
+       CDC_Transmit_FS((uint8_t*)"Hello World\r\n",13);
+       ^~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "test1.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\ra97\STM32CubeIDE\workspace_1.3.0\test1\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="test1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Drivers/CMSIS/Device/ST/STM32F1xx/Source/Templates/system_stm32f1xx.o:C:/MC/Stm32/test1/Debug/../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h:51: multiple definition of `SystemCoreClock'
+Core/Src/system_stm32f1xx.o:C:/Users/ra97/STM32CubeIDE/workspace_1.3.0/test1/Debug/../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h:51: first defined here
+Drivers/CMSIS/Device/ST/STM32F1xx/Source/Templates/system_stm32f1xx.o:(.rodata.AHBPrescTable+0x0): multiple definition of `AHBPrescTable'
+Core/Src/system_stm32f1xx.o:(.rodata.AHBPrescTable+0x0): first defined here
+Drivers/CMSIS/Device/ST/STM32F1xx/Source/Templates/system_stm32f1xx.o:(.rodata.APBPrescTable+0x0): multiple definition of `APBPrescTable'
+Core/Src/system_stm32f1xx.o:(.rodata.APBPrescTable+0x0): first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:52: test1.elf] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+
+12:32:20 Build Failed. 3 errors, 2 warnings. (took 3s.560ms)
+

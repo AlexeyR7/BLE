@@ -1,0 +1,5 @@
+httpd.c:50:6:tcp_send_http_one	32	static
+httpd.c:109:6:tcp_send_http_first	40	static
+httpd.c:175:6:tcp_send_http_middle	40	static
+httpd.c:238:6:tcp_send_http_last	40	static
+httpd.c:278:6:http_request	40	static

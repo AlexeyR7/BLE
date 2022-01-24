@@ -1,0 +1,10 @@
+16:09:07 **** Incremental Build of configuration Debug for project STM32F407VE_TEST ****
+make -j4 all 
+arm-none-eabi-size   STM32F407VE_TEST.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28996	    492	   4188	  33676	   838c	STM32F407VE_TEST.elf
+Finished building: default.size.stdout
+ 
+
+16:09:09 Build Finished. 0 errors, 0 warnings. (took 1s.631ms)
+
